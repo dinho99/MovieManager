@@ -1,6 +1,15 @@
 package it.uniroma3.siw.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity //permette al framework di capire che per questa entità deve creare una tabella
 public class Movie {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO) //permette al framework di capire che deve generare id sequenziale
 
     private Long id;
     private String title;
@@ -52,3 +61,4 @@ public class Movie {
         return this.getTitle().hashCode() + this.getYear().hashCode();
     }
 }
+
