@@ -61,4 +61,3 @@ public class Movie {
         return this.getTitle().hashCode() + this.getYear().hashCode();
     }
 }
-
